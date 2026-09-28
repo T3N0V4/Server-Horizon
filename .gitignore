@@ -4,6 +4,7 @@
 world/
 world_nether/
 world_the_end/
+world_vacio/
 
 # =========================
 # FABRIC CACHE
@@ -22,11 +23,13 @@ crash-reports/
 cache/
 tmp/
 temp/
+chunky/
 
 # =========================
-# LIBRERÍAS DESCARGADAS
+# LIBRERÍAS / RUNTIME
 # =========================
 libraries/
+versions/
 
 # =========================
 # BACKUPS
@@ -42,29 +45,18 @@ backups/
 *.sqlite3
 
 # =========================
-# SISTEMA
-# =========================
-.DS_Store
-Thumbs.db
-desktop.ini
-# =========================
 # MODS BINARIOS
 # =========================
 mods/*.jar
 disabled-mods/*.jar
 
 # =========================
-# JARS / BINARIOS GENERADOS
+# JARS / BINARIOS
 # =========================
 *.jar
 
-# Excepción: si querés conservar el launcher Fabric
+# Excepción: conservar launcher Fabric
 !fabric-server-*.jar
-
-# =========================
-# VERSIONES / RUNTIME
-# =========================
-versions/
 
 # =========================
 # DATOS DE JUGADORES
@@ -76,30 +68,39 @@ banned-ips.json
 banned-players.json
 
 # =========================
-# ARCHIVOS GENERADOS POR SERVIDOR
+# ARCHIVOS GENERADOS
 # =========================
 session.lock
 *.lock
-
-# =========================
-# AUDITORÍAS / SALIDAS TEMPORALES
-# =========================
-optimization-audit-*/
-# Archivos de servidor generados
 server-icon.png
 *.pid
 
-# Dumps / diagnósticos Java
+# =========================
+# AUDITORÍAS
+# =========================
+optimization-audit-*/
+
+# =========================
+# JAVA DUMPS
+# =========================
 hs_err_pid*
 replay_pid*
 *.hprof
 
-# Archivos temporales
+# =========================
+# ARCHIVOS TEMPORALES
+# =========================
 *.tmp
 *.temp
 
-# Paneles / herramientas locales
+# =========================
+# PANEL LOCAL
+# =========================
 panel/
 
-# Salidas de pre-generación / utilidades
-chunky/
+# =========================
+# SISTEMA
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
