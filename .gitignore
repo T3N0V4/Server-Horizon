@@ -47,3 +47,41 @@ backups/
 .DS_Store
 Thumbs.db
 desktop.ini
+# =========================
+# MODS BINARIOS
+# =========================
+mods/*.jar
+disabled-mods/*.jar
+
+# =========================
+# JARS / BINARIOS GENERADOS
+# =========================
+*.jar
+
+# Excepción: si querés conservar el launcher Fabric
+!fabric-server-*.jar
+
+# =========================
+# VERSIONES / RUNTIME
+# =========================
+versions/
+
+# =========================
+# DATOS DE JUGADORES
+# =========================
+usercache.json
+whitelist.json
+ops.json
+banned-ips.json
+banned-players.json
+
+# =========================
+# ARCHIVOS GENERADOS POR SERVIDOR
+# =========================
+session.lock
+*.lock
+
+# =========================
+# AUDITORÍAS / SALIDAS TEMPORALES
+# =========================
+optimization-audit-*/
