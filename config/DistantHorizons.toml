@@ -15,13 +15,13 @@ _version = 3
 	#
 	# Defines the distance allowed to be synchronized around the player. 
 	# Should be the same or larger than maxGenerationRequestDistance in most cases.
-	maxSyncOnLoadRequestDistance = 256
+	maxSyncOnLoadRequestDistance = 4096
 	#
 	# If true, clients will receive updated LODs when joining or loading new LODs.
 	synchronizeOnLoad = true
 	#
 	# Defines the distance allowed to generate around the player.
-	maxGenerationRequestDistance = 256
+	maxGenerationRequestDistance = 80
 	#
 	# Defines the X-coordinate of the central point for generation boundaries, in blocks.
 	generationBoundsX = 0
@@ -32,11 +32,11 @@ _version = 3
 	#
 	# How many LOD generation requests per second should a client send? 
 	# Also limits the number of client requests allowed to stay in the server's queue.
-	generationRequestRateLimit = 20
+	generationRequestRateLimit = 1
 	#
 	# How many LOD sync requests per second should a client send? 
 	# Also limits the amount of player's requests allowed to stay in the server's queue.
-	syncOnLoadRateLimit = 50
+	syncOnLoadRateLimit = 100
 	#
 	# Defines the radius around the central point within which generation is allowed, in blocks. 
 	# If this value is set to 0, generation bounds are disabled.
@@ -44,15 +44,10 @@ _version = 3
 	#
 	# Maximum speed for uploading LODs to the clients, in KB/s.
 	# Value of 0 disables the limit.
-	maxDataTransferSpeed = 500
+	maxDataTransferSpeed = 30000
 	#
 	# If true, clients will receive real-time LOD updates for chunks outside the client's render distance.
 	enableRealTimeUpdates = true
-	#
-	# Enables adaptive transfer speed based on client performance.
-	# If true, DH will automatically adjust transfer rate to minimize connection lag.
-	# If false, transfer speed will remain fixed.
-	enableAdaptiveTransferSpeed = false
 
 	[server.experimental]
 		#
@@ -111,20 +106,20 @@ _version = 3
 		# UNCOMPRESSED 
 		# Should only be used for testing, is worse in every way vs [LZ4].
 		# Expected Compression Ratio: 1.0
-		# Estimated average DTO read speed: 3.25 milliseconds
-		# Estimated average DTO write speed: 5.99 milliseconds
+		# Estimated average DTO read speed: 1.64 milliseconds
+		# Estimated average DTO write speed: 12.44 milliseconds
 		# 
 		# LZ4 
 		# A good option if you're CPU limited and have plenty of hard drive space.
-		# Expected Compression Ratio: 0.26
+		# Expected Compression Ratio: 0.36
 		# Estimated average DTO read speed: 1.85 ms
 		# Estimated average DTO write speed: 9.46 ms
 		# 
 		# LZMA2 
 		# Slow but very good compression.
-		# Expected Compression Ratio: 0.2
-		# Estimated average DTO read speed: 13.29 ms
-		# Estimated average DTO write speed: 70.95 ms
+		# Expected Compression Ratio: 0.14
+		# Estimated average DTO read speed: 11.89 ms
+		# Estimated average DTO write speed: 192.01 ms
 		dataCompression = "LZ4"
 		#
 		# Enabling this will drastically increase chunk processing time
@@ -164,7 +159,7 @@ _version = 3
 	[common.multiThreading]
 		#
 		# How many threads should be used by Distant Horizons?
-		numberOfThreads = 2
+		numberOfThreads = 10
 		#
 		# A value between 1.0 and 0.0 that represents the percentage 
 		# of time each thread can run before going idle. 
@@ -172,7 +167,7 @@ _version = 3
 		# This can be used to reduce CPU usage if the thread count 
 		# is already set to 1 for the given option, or more finely 
 		# tune CPU performance.
-		threadRunTimeRatio = "1.0"
+		threadRunTimeRatio = "0.8"
 
 	[common.logging]
 		#
@@ -249,7 +244,7 @@ _version = 3
 		# but may cause server/simulation lag. 
 		# Note: unlike other modes this option DOES save generated chunks to 
 		# Minecraft's region files.
-		distantGeneratorMode = "FEATURES"
+		distantGeneratorMode = "INTERNAL_SERVER"
 		#
 		# How should distant generator progress be displayed? 
 		# 
@@ -257,10 +252,10 @@ _version = 3
 		# CHAT 
 		# LOG 
 		# DISABLED
-		showGenerationProgress = "OVERLAY"
+		showGenerationProgress = "LOG"
 		#
 		# How often should the distant generator progress be displayed?
-		generationProgressDisplayIntervalInSeconds = 2
+		generationProgressDisplayIntervalInSeconds = 5
 		#
 		# For how many seconds should instructions for disabling the distant generator progress be displayed? 
 		# Setting this to 0 hides the instructional message so the world gen progress is shown immediately when it starts.
@@ -287,7 +282,7 @@ _version = 3
 			updateBranch = "AUTO"
 			#
 			# Automatically check for updates on game launch?
-			enableAutoUpdater = true
+			enableAutoUpdater = false
 			#
 			# Should Distant Horizons silently, automatically download and install new versions? 
 			# This setting is force disabled on dedicated servers for stability reasons.
@@ -395,7 +390,7 @@ _version = 3
 				# Defines how OpenGL errors are handled. 
 				#  Requires rebooting Minecraft to change. 
 				# Will catch OpenGL errors thrown by other mods.
-				overrideVanillaGLLogger = true
+				overrideVanillaGLLogger = false
 				#
 				# Defines how OpenGL errors are handled. 
 				# May incorrectly catch OpenGL errors thrown by other mods. 
@@ -620,7 +615,7 @@ _version = 3
 				# 
 				# Lowest Quality: HEIGHT_MAP
 				# Highest Quality: EXTREME
-				verticalQuality = "MEDIUM"
+				verticalQuality = "HIGH"
 				#
 				# What blocks shouldn't be rendered as LODs? 
 				# 
@@ -629,7 +624,7 @@ _version = 3
 				blocksToIgnore = "NON_COLLIDING"
 				#
 				# The radius of the mod's render distance. (measured in chunks)
-				lodChunkRenderDistanceRadius = 256
+				lodChunkRenderDistanceRadius = 32
 				#
 				# What the value should vanilla Minecraft's texture LodBias be? 
 				# If set to 0 the mod wont overwrite vanilla's default (which so happens to also be 0)
@@ -791,5 +786,5 @@ _version = 3
 			# IP_ONLY: Example: "192.168.1.40" 
 			# NAME_IP: Example: "Minecraft Server IP 192.168.1.40" 
 			# NAME_IP_PORT: Example: "Minecraft Server IP 192.168.1.40:25565"NAME_IP_PORT_MC_VERSION: Example: "Minecraft Server IP 192.168.1.40:25565 GameVersion 1.16.5"
-			serverFolderNameMode = "NAME_ONLY"
+			serverFolderNameMode = "NAME_IP_PORT"
 

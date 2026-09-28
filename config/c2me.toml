@@ -20,7 +20,7 @@ version = 3
 # 
 defaultGlobalExecutorParallelismExpression = "default"
 # (Default: 6) Configures the parallelism of global executor
-globalExecutorParallelism = 3
+globalExecutorParallelism = "default"
 
 [fixes]
 	# (Default: true)  
@@ -40,12 +40,11 @@ globalExecutorParallelism = 3
 	# 
 	# 
 	enforceSafeWorldRandomAccess = "default"
-
 [noTickViewDistance]
 	# (Default: true) Whether to use compatibility mode to send chunks 
 	#  This may fix some mod compatibility issues
 	compatibilityMode = "default"
-	# (Default: 4) No-tick view distance max concurrent chunk loads 
+	# (Default: 7) No-tick view distance max concurrent chunk loads 
 	#  Lower this for a better latency and higher this for a faster loading
 	maxConcurrentChunkLoads = "default"
 	# (Default: false) Whether to ensure correct chunks within normal render distance 
@@ -53,7 +52,6 @@ globalExecutorParallelism = 3
 	ensureChunkCorrectness = "default"
 	# (Default: true) Whether to enable no-tick view distance
 	enabled = "default"
-
 [generalOptimizations]
 	# (Default: 100000) The task interval of mid-tick chunk tasks in nanoseconds (-1 to disable)  
 	# Mid-tick chunk tasks is to execute chunk tasks during server tick loop  
@@ -84,7 +82,6 @@ globalExecutorParallelism = 3
 		# This is only used when mode is set to ENHANCED
 		# 
 		delay = "default"
-
 [ioSystem]
 	# (Default: true) Whether to use async chunk loading & unloading
 	async = "default"
@@ -116,7 +113,6 @@ globalExecutorParallelism = 3
 	chunkDataCacheSoftLimit = "default"
 	# (Default: 32678) Hard limit for io worker nbt cache
 	chunkDataCacheLimit = "default"
-
 [threadedWorldGen]
 	# (Default: true) Whether to allow feature generation (world decorations like trees, ores and etc.) run in parallel
 	# (may cause incompatibility with other mods)
@@ -131,7 +127,6 @@ globalExecutorParallelism = 3
 	asyncScheduling = "default"
 	# (Default: true) Whether to enable this feature
 	enabled = "default"
-
 [vanillaWorldGenOptimizations]
 	# (Default: true) Whether to enable aquifer optimizations to accelerate overworld worldgen
 	# (may cause incompatibility with other mods)
@@ -141,4 +136,3 @@ globalExecutorParallelism = 3
 	# (may cause incompatibility with other mods)
 	# 
 	useEndBiomeCache = "default"
-

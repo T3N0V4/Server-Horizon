@@ -1,106 +1,95 @@
-# =========================
-# MUNDO
-# =========================
-world/
-world_nether/
-world_the_end/
-world_vacio/
+# ==============================
+# MINECRAFT - ARCHIVOS GENERADOS
+# ==============================
 
-# =========================
-# FABRIC CACHE
-# =========================
-.fabric/
+# Mundos
+/world/
+/world_nether/
+/world_the_end/
+/world*/
 
-# =========================
-# LOGS / CRASHES
-# =========================
-logs/
-crash-reports/
+# Logs y crashes
+/logs/
+/crash-reports/
+*.log
 
-# =========================
-# CACHE / TEMPORALES
-# =========================
-cache/
-tmp/
-temp/
-chunky/
-
-# =========================
-# LIBRERÍAS / RUNTIME
-# =========================
-libraries/
-versions/
-
-# =========================
-# BACKUPS
-# =========================
-backups/
-*.old
-*.bak
-
-# =========================
-# ARCHIVOS GRANDES / DB
-# =========================
-*.sqlite
-*.sqlite3
-
-# =========================
-# MODS BINARIOS
-# =========================
-mods/*.jar
-disabled-mods/*.jar
-
-# =========================
-# JARS / BINARIOS
-# =========================
-*.jar
-
-# Excepción: conservar launcher Fabric
-!fabric-server-*.jar
-
-# =========================
-# DATOS DE JUGADORES
-# =========================
-usercache.json
-whitelist.json
-ops.json
-banned-ips.json
-banned-players.json
-
-# =========================
-# ARCHIVOS GENERADOS
-# =========================
-session.lock
-*.lock
-server-icon.png
-*.pid
-
-# =========================
-# AUDITORÍAS
-# =========================
-optimization-audit-*/
-
-# =========================
-# JAVA DUMPS
-# =========================
-hs_err_pid*
-replay_pid*
-*.hprof
-
-# =========================
-# ARCHIVOS TEMPORALES
-# =========================
+# Cachés / temporales
+/cache/
+/caches/
 *.tmp
 *.temp
 
-# =========================
-# PANEL LOCAL
-# =========================
-panel/
+# Archivos generados por Fabric / Minecraft
+/libraries/
+/versions/
+.fabric/
+fabric-server-launch.jar
+/fabric-server*.jar
 
-# =========================
+# Datos de jugadores / servidor
+/usercache.json
+/usernamecache.json
+/ops.json
+/whitelist.json
+/banned-ips.json
+/banned-players.json
+
+# Runtime
+/session.lock
+*.lock
+
+# ==============================
+# MODS
+# ==============================
+
+# No subir cientos de JARs al repo
+/mods/*.jar
+
+# Pero permitir archivos auxiliares dentro de mods
+!/mods/*.json
+!/mods/*.txt
+!/mods/*.md
+
+# ==============================
+# DISTANT HORIZONS / DATOS GRANDES
+# ==============================
+
+Distant_Horizons_server_data/
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# ==============================
+# BACKUPS
+# ==============================
+
+/backups/
+/backup/
+/mod-backups/
+/disabled-mods/
+*.bak
+*.backup
+*.old
+
+# ==============================
 # SISTEMA
-# =========================
+# ==============================
+
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# ==============================
+# EDITORES
+# ==============================
+
+.vscode/
+.idea/
+
+# ==============================
+# PANEL LOCAL
+# ==============================
+
+panel/
