@@ -1,0 +1,178 @@
+# LambDynamicLights configuration.
+# The dynamic lights mode
+mode = "fancy"
+
+# Light sources settings.
+[light_sources]
+	# Enables water-sensitive light sources check. This means that water-sensitive items will not light up when submerged in water.
+	water_sensitive_check = true
+	# Enable block entities light source.
+	block_entities = true
+	# Enable entities light source.
+	entities = true
+	# Enable first-person player light source.
+	self = true
+	# TNT lighting mode. May be off, simple or fancy.
+	tnt = "off"
+	# Creeper lighting mode. May be off, simple or fancy.
+	creeper = "simple"
+
+	[light_sources.settings]
+
+		[light_sources.settings.entities]
+
+			[light_sources.settings.entities.minecraft]
+				axolotl = true
+				bee = true
+				cow = true
+				pig = true
+				skeleton = true
+				llama = true
+				bat = true
+				husk = true
+				frog = true
+				camel = true
+				rabbit = true
+				armor_stand = true
+				drowned = true
+				experience_orb = true
+				dolphin = true
+				item = true
+				stray = true
+				turtle = true
+				salmon = true
+				wither_skeleton = true
+				goat = true
+				ocelot = true
+				item_frame = true
+				horse = true
+				vindicator = true
+				ender_dragon = true
+				evoker = true
+				glow_squid = true
+				glow_item_frame = false
+				squid = true
+				parrot = true
+				creeper = true
+				lightning_bolt = true
+				enderman = true
+				chicken = true
+				donkey = true
+				tropical_fish = true
+				fox = true
+				chest_minecart = true
+				slime = true
+				pillager = true
+				iron_golem = true
+				area_effect_cloud = true
+				blaze = true
+				cat = true
+				zombie = true
+				guardian = true
+				sheep = true
+				player = true
+				pufferfish = true
+				illusioner = true
+				potion = true
+				trident = true
+				wolf = true
+				villager = true
+				zombie_villager = true
+				tnt_minecart = true
+				elder_guardian = true
+				boat = true
+				polar_bear = true
+				strider = true
+				painting = true
+				cave_spider = true
+				cod = true
+				witch = true
+				spider = true
+
+			[light_sources.settings.entities.snuffles]
+				snuffle = true
+
+			[light_sources.settings.entities.creeperoverhaul]
+				swamp_creeper = true
+				bamboo_creeper = true
+				jungle_creeper = true
+				cave_creeper = true
+				beach_creeper = true
+				savannah_creeper = true
+				spruce_creeper = true
+				hills_creeper = true
+				snowy_creeper = true
+				badlands_creeper = true
+				ocean_creeper = true
+				dark_oak_creeper = true
+				desert_creeper = true
+				dripstone_creeper = true
+
+			[light_sources.settings.entities.deeperdarker]
+				stalker = true
+
+			[light_sources.settings.entities.iceandfire]
+				pixie = true
+				cockatrice = true
+				lightning_dragon = true
+				siren = true
+				hippocampus = true
+				myrmex_queen = true
+				hippogryph = true
+				troll = true
+				fire_dragon = true
+				myrmex_soldier = true
+				ice_dragon = true
+				multipart = true
+				dragon_multipart = true
+				amphithere = true
+				sea_serpent = true
+				myrmex_worker = true
+
+			[light_sources.settings.entities.bosses_of_mass_destruction]
+				lich = true
+				gauntlet = true
+
+			[light_sources.settings.entities.graveyard]
+				revenant = true
+				skeleton_creeper = true
+				corrupted_pillager = true
+				reaper = true
+				nightmare = true
+				acolyte = true
+				lich = true
+				nameless_hanged = true
+				ghouling = true
+				wraith = true
+				corrupted_vindicator = true
+				falling_corpse = true
+				ghoul = true
+
+			[light_sources.settings.entities.smallships]
+				brigg = true
+
+			[light_sources.settings.entities.beansbackpacks]
+				backpack = true
+
+			[light_sources.settings.entities.adventurez]
+				deer = true
+				iguana = true
+				amethyst_golem = true
+				ender_whale = true
+
+			[light_sources.settings.entities.friendsandfoes]
+				glare = true
+				copper_golem = true
+				moobloom = true
+				mauler = true
+				iceologer = true
+				rascal = true
+
+			[light_sources.settings.entities.aquamirae]
+				captain_cornelia = true
+				anglerfish = true
+				maze_rose = true
+
+			[light_sources.settings.entities.crab]
+				sniffer = true
+

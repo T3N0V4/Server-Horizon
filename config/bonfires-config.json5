@@ -1,0 +1,25 @@
+{
+	"client": {
+		"renderTextAboveBonfire": true,
+		"tabIcons": [
+			"minecraft:overworld=minecraft:grass_block",
+			"minecraft:the_nether=minecraft:netherrack",
+			"minecraft:the_end=minecraft:end_stone",
+			"kingdomkeys:dive_to_the_heart=kingdomkeys:mosaic_stained_glass"
+		],
+		"renderScreenshotsInGui": true,
+		"enableAutomaticScreenshotOnCreation": true,
+		"deleteScreenshotsOnDestroyed": true,
+		"hiddenDimensions": []
+	},
+	"common": {
+		"enableUBSBonfire": true,
+		"enableReinforcing": true,
+		"reinforceBlacklist": [],
+		"bonfireMonsterCheckRadius": 8.0,
+		"repairEquipment": false,
+		"estusFlaskBaseHeal": 6.0,
+		"estusFlaskHealPerLevel": 1.0,
+		"reinforceDamagePerLevel": 0.5
+	}
+}

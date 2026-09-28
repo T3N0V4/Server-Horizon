@@ -1,0 +1,14 @@
+Configuration validation: 2026-09-25
+Parser: relocated NightConfig TomlParser from installed Distant Horizons 2.3.4-b JAR.
+Read-only comparison against config/*.toml.bak. Minecraft and the world were not started.
+
+PASS config\c2me.toml: both complete TOML documents parsed; 25 scalar/list keys; no keys added or removed; 1 intended changes.
+  globalExecutorParallelism: default [String] -> 3 [Integer]
+PASS config\DistantHorizons.toml: both complete TOML documents parsed; 141 scalar/list keys; no keys added or removed; 4 intended changes.
+  common.lodBuilding.dataCompression: LZMA2 [String] -> LZ4 [String]
+  common.multiThreading.numberOfThreads: 8 [Integer] -> 2 [Integer]
+  server.maxGenerationRequestDistance: 4096 [Integer] -> 256 [Integer]
+  server.maxSyncOnLoadRequestDistance: 4096 [Integer] -> 256 [Integer]
+
+PASS: exactly 1 C2ME change and 4 Distant Horizons changes; expected values and Java types confirmed.
+Syntax and semantic key comparison only; no runtime performance measurement or mod startup test.
