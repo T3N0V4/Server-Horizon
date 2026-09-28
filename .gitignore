@@ -85,3 +85,21 @@ session.lock
 # AUDITORÍAS / SALIDAS TEMPORALES
 # =========================
 optimization-audit-*/
+# Archivos de servidor generados
+server-icon.png
+*.pid
+
+# Dumps / diagnósticos Java
+hs_err_pid*
+replay_pid*
+*.hprof
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Paneles / herramientas locales
+panel/
+
+# Salidas de pre-generación / utilidades
+chunky/
